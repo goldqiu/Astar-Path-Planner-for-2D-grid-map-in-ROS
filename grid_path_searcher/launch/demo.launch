@@ -1,0 +1,16 @@
+<launch>
+
+  <node pkg="grid_path_searcher" type="demo_node" name="demo_node" output="screen" required = "true">
+      <remap from="~waypoints"       to="/waypoint_generator/waypoints"/>
+      <param name="mapTopic" type="string" value="/grid_map_global" />
+
+  </node>
+
+  <node pkg="waypoint_generator" name="waypoint_generator" type="waypoint_generator" output="screen">
+      <remap from="~goal" to="/goal"/>
+      <param name="waypoint_type" value="manual-lonely-waypoint"/>    
+  </node>
+
+  <node name="rvizvisualisation" pkg="rviz" type="rviz" output="log" args="-d $(find grid_path_searcher)/launch/rviz_config/demo_wx.rviz" />
+
+</launch>
