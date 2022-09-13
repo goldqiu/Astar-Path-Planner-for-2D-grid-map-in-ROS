@@ -1,7 +1,7 @@
 # Astar-Path-Planner-for-2D-grid-map-in-ROS
 A*-Path-Planner-for-2D-grid-map-in-ROS
 
-ROS: nav_msgs::OccupancyGrid 格式二维栅格地图的A星全局规划算法和实现
+ROS: nav_msgs::OccupancyGrid 格式 二维栅格地图的A星全局规划算法和实现
 
 
 
